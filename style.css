@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+    min-height: 100vh; /* Pastikan tinggi minimal 100% layar */
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
@@ -12,8 +13,9 @@ body {
     color: rgb(242, 243, 237);
     text-align: center;
 }
+
 main {
-    flex: 1;
+    flex: 1; /* Isi ruang di tengah */
 }
 header {
     padding: 20px;
@@ -79,4 +81,5 @@ footer {
     background: rgba(0,0,0,0.6);
     padding: 10px;
     font-size: 0.8rem;
+
 }
