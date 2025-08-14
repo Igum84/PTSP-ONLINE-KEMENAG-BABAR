@@ -1,5 +1,8 @@
 document.querySelectorAll(".menu-item").forEach(item => {
     item.addEventListener("click", () => {
-        alert("Fitur " + item.innerText + " diklik!");
+        const target = item.getAttribute("data-link");
+        if (target) {
+            window.location.href = target;
+        }
     });
 });
