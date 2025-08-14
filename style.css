@@ -1,0 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: url('bg-ptsp.jpg') no-repeat center center/cover;
+    color: rgb(242, 243, 237);
+    text-align: center;
+}
+main {
+    flex: 1;
+}
+header {
+    padding: 20px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('bg-header.jpeg') no-repeat center center/cover;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    border-bottom: 4px solid rgba(255,255,255,0.2);
+}
+
+.logo {
+    width: 80px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+}
+
+.subtext {
+    font-size: 0.9rem;
+    color: #dde2d4;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.menu-item {
+    background: linear-gradient(135deg, rgba(5, 39, 5, 0.85), rgba(30, 58, 58, 0.85));
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(221, 113, 140, 0.95), rgba(117, 223, 117, 0.95));
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.menu-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    font-size: 0.8rem;
+}
