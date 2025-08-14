@@ -5,7 +5,8 @@ html, body {
 }
 
 body {
-    min-height: 100dvh; /* Gunakan tinggi layar sebenarnya di mobile */
+    min-height: 100vh;  /* fallback */
+min-height: 100dvh; /* mobile modern */ /* Gunakan tinggi layar sebenarnya di mobile */
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
@@ -85,4 +86,5 @@ footer {
     font-size: 0.8rem;
 
 }
+
 
