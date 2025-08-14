@@ -1,21 +1,23 @@
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 body {
-    min-height: 100vh; /* Pastikan tinggi minimal 100% layar */
+    min-height: 100dvh; /* Gunakan tinggi layar sebenarnya di mobile */
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    background: url('bg-ptsp.jpg') no-repeat center center/cover;
+    background: url('bg-ptsp.jpg') no-repeat center center;
+    background-size: cover; /* Pastikan gambar memenuhi seluruh area */
+    background-attachment: fixed; /* Opsional: biar nggak geser saat scroll */
     color: rgb(242, 243, 237);
     text-align: center;
 }
 
 main {
-    flex: 1; /* Isi ruang di tengah */
+    flex: 1;
 }
 header {
     padding: 20px;
@@ -83,3 +85,4 @@ footer {
     font-size: 0.8rem;
 
 }
+
