@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendidikan Madrasah - PTSP Kemenag Babar</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: white;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    header {
+        background-color: #0a3d0a;
+        padding: 10px;
+    }
+    header img {
+        height: 100px;
+    }
+    h1 {
+        margin: 10px 0 0 0;
+    }
+    .subtext {
+        color: #f5efef;
+        font-size: 14px;
+    }
+    .layanan-container {
+        padding: 20px;
+    }
+    .layanan-title {
+        font-size: 20px;
+        color: #e4f16f;
+        margin-bottom: 15px;
+    }
+    .layanan-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    .layanan-item {
+        display: flex;
+        flex-direction: column; /* susun vertikal */
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+    .layanan-item:hover {
+        background-color: #084c86; /* warna latar saat hover */
+        transform: translateY(-5px); /* sedikit naik */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* bayangan */
+    }
+    .layanan-item img {
+        max-width: 50px; /* ukuran icon tetap */
+        height: auto;
+        margin-bottom: 8px; /* jarak icon dan teks */
+    }
+    .layanan-item span {
+        font-size: 14px;
+    }
+    footer {
+        background-color: #0a3d0a;
+        padding: 15px;
+        font-size: 14px;
+        color: #cccccc;
+        margin-top: 20px;
+    }
+</style>
+
+</head>
+<body>
+
+    <header>
+        <img src="logo-kemenag.png" alt="Logo Kemenag">
+        <h1>PENDIDIKAN MADRASAH</h1>
+        <p class="subtext">Layanan Informasi Sekretariat</p>
+    </header>
+
+<main class="layanan-container">
+    <div class="layanan-title">LAYANAN</div>
+    <div class="layanan-grid">
+      
+        <div class="layanan-item">
+            <img src="icon-danabos.png" alt="danabos">
+            <span>Permohonan Rekomendasi Penggunaan Dana BOS Untuk Honor diatas 60%</span>
+        </div>
+        <div class="layanan-item">
+            <img src="icon-lanjutsekolah.png" alt="lanjutsekolah">
+            <span>Permohonan Rekomendasi Melanjutkan Sekolah/Kuliah Keluar Negeri</span>
+        </div>
+        <div class="layanan-item">
+            <img src="icon-sarpras.png" alt="sarpras">
+            <span>Permohonan Rekomendasi Bantuan Sarana Prasarana</span>
+        </div>
+
+        <div class="layanan-item">
+            <img src="icon-calonkepala.png" alt="calonkepala">
+            <span>Permohonan Seleksi Substansi Calon Kepala RA/Madrasah</span>
+        </div>
+      
+        <div class="layanan-item">
+            <img src="icon-mutasi.png" alt="mutasi">
+            <span>Permohonan Rekomendasi Mutasi Siswa Dalam,Luar Provinsi dan Luar Negeri</span>
+        </div>
+
+
+      
+    </div>
+</main>
+
+
+    <div style="text-align: center; margin: 30px 0;">
+    <button onclick="location.href='index.html'" 
+        style="background-color: #28a745; 
+               border: none; 
+               padding: 12px 24px; 
+               color: white; 
+               font-size: 18px; 
+               border-radius: 8px; 
+               cursor: pointer; 
+               display: inline-flex; 
+               align-items: center; 
+               gap: 8px;">
+        <img src="icon-beranda.gif" alt="Beranda" style="width: 30px; height: 30px;">
+        Beranda
+    </button>
+</div>
+
+
+    <footer>
+        Kantor Kementerian Agama Kabupaten Bangka Barat<br>
+        Komplek Perkantoran Terpadu Pemkab Bangka Barat Pal 4 Daya Baru Mentok 33351
+    </footer>
+
+</body>
+</html>
