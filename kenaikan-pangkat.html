@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengajuan Kenaikan Pangkat</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+        }
+        h1 {
+            color: #cee0ce;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #00ff00;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ccc;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            background-color: #333;
+            border: 1px solid #555;
+            color: #fff;
+            border-radius: 5px;
+        }
+        input[type="file"] {
+            color: #ccc;
+        }
+        .upload-group {
+            margin-left: 20px;
+        }
+        button {
+            background-color: #00ff00;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #00cc00;
+        }
+        .note {
+            font-size: 12px;
+            color: #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>PENGAJUAN KENAIKAN PANGKAT</h2>
+        <h2>FORM PERMOHONAN</h2>
+        <div class="form-group">
+            <label>Nama Lengkap Pemohon *</label>
+            <input type="text" placeholder="Nama Lengkap Pemohon">
+        </div>
+        <div class="form-group">
+            <label>Nomor WA/Pemohon yang dapat dihubungi *<br>(contoh: 0823456789)</label>
+            <input type="text" placeholder="Nomor WA/Pemohon">
+        </div>
+        <div class="form-group">
+            <label>Nomor Surat</label>
+            <input type="text" placeholder="Nomor Surat">
+        </div>
+        <div class="form-group">
+            <label>Tanggal Surat/Permohonan *</label>
+            <input type="text" placeholder="Tanggal Surat/Permohonan">
+        </div>
+        <div class="form-group">
+            <label>Nama Instansi/Lembaga/Seksi Pemohon *</label>
+            <input type="text" placeholder="Nama Instansi/Lembaga/Seksi Pemohon">
+        </div>
+        <div class="form-group">
+            <label>Perihal Surat/Permohonan *</label>
+            <input type="text" placeholder="Perihal Surat/Permohonan">
+        </div>
+        <h2>Dokumen pernyataan yang harus diupload</h2>
+        <div class="form-group upload-group">
+            <label>1. Upload SK Terakhir *</label>
+            <input type="file" accept=".pdf, .jpg, .png" onchange="updateFileName(this, 'sk-terakhir')">
+            <span id="sk-terakhir">No file chosen</span>
+        </div>
+        <div class="form-group upload-group">
+            <label>2. Upload SKP 2 Tahun *</label>
+            <input type="file" accept=".pdf, .jpg, .png" onchange="updateFileName(this, 'skp-2tahun')">
+            <span id="skp-2tahun">No file chosen</span>
+        </div>
+        <div class="form-group upload-group">
+            <label>3. Upload Kartu Pegawai (Karppeg) *</label>
+            <input type="file" accept=".pdf, .jpg, .png" onchange="updateFileName(this, 'karppeg')">
+            <span id="karppeg">No file chosen</span>
+        </div>
+        <div class="note">
+            Dengan mengisi formulir ini, saya menyatakan bahwa saya telah mengupload data asli dan bukan hasil manipulasi atau editan dari dokumen asli, dan saya bertanggung jawab sepenuhnya jika dikemudian hari terbukti ada pelanggaran.
+        </div>
+        <button>Kirim</button>
+    </div>
+    <script>
+        function updateFileName(input, elementId) {
+            const fileName = input.files[0] ? input.files[0].name : 'No file chosen';
+            document.getElementById(elementId).textContent = fileName;
+        }
+    </script>
+</body>
+</html>
