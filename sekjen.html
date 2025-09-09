@@ -1,133 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengajuan Kenaikan Pangkat</title>
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: #000;
-            padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-        }
-        h1 {
-            color: #cee0ce;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #00ff00;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #ccc;
-        }
-        input[type="text"], input[type="file"] {
-            width: 100%;
-            padding: 8px;
-            background-color: #333;
-            border: 1px solid #555;
-            color: #fff;
-            border-radius: 5px;
-        }
-        input[type="file"] {
-            color: #ccc;
-        }
-        .upload-group {
-            margin-left: 20px;
-        }
-        button {
-            background-color: #00ff00;
-            color: #000;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #00cc00;
-        }
-        .note {
-            font-size: 12px;
-            color: #ccc;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Sekjen - PTSP Kemenag Babar</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #111;
+        color: white;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    header {
+        background-color: #0a3d0a;
+        padding: 10px;
+    }
+    header img {
+        height: 100px;
+    }
+    h1 {
+        margin: 10px 0 0 0;
+    }
+    .subtext {
+        color: #f5efef;
+        font-size: 14px;
+    }
+    .layanan-container {
+        padding: 20px;
+    }
+    .layanan-title {
+        font-size: 20px;
+        color: #e4f16f;
+        margin-bottom: 15px;
+    }
+    .layanan-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    .layanan-item {
+        display: flex;
+        flex-direction: column; /* susun vertikal */
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+    .layanan-item:hover {
+        background-color: #084c86; /* warna latar saat hover */
+        transform: translateY(-5px); /* sedikit naik */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* bayangan */
+    }
+    .layanan-item img {
+        max-width: 50px; /* ukuran icon tetap */
+        height: auto;
+        margin-bottom: 8px; /* jarak icon dan teks */
+    }
+    .layanan-item span {
+        font-size: 14px;
+    }
+    footer {
+        background-color: #0a3d0a;
+        padding: 15px;
+        font-size: 14px;
+        color: #cccccc;
+        margin-top: 20px;
+    }
+</style>
+
 </head>
 <body>
-    <div class="container">
-        <h2>PENGAJUAN KENAIKAN PANGKAT</h2>
-        <h2>FORM PERMOHONAN</h2>
-        <div class="form-group">
-            <label>Nama Lengkap Pemohon *</label>
-            <input type="text" placeholder="Nama Lengkap Pemohon">
+
+    <header>
+        <img src="logo-kemenag.png" alt="Logo Kemenag">
+        <h1>SEKJEN</h1>
+        <p class="subtext">Layanan Informasi Sekretariat</p>
+    </header>
+
+<main class="layanan-container">
+    <div class="layanan-title">LAYANAN</div>
+    <div class="layanan-grid">
+        <div class="layanan-item">
+            <img src="icon-cuti.png" alt="Cuti">
+            <span>Pengajuan Cuti Tahunan/Haji/Melahirkan</span>
         </div>
-        <div class="form-group">
-            <label>Nomor WA/Pemohon yang dapat dihubungi *<br>(contoh: 0823456789)</label>
-            <input type="text" placeholder="Nomor WA/Pemohon">
+        <div class="layanan-item">
+            <img src="icon-naik-pangkat.png" alt="Naik Pangkat">
+            <span>Pengajuan Kenaikan Pangkat</span>
         </div>
-        <div class="form-group">
-            <label>Nomor Surat</label>
-            <input type="text" placeholder="Nomor Surat">
+        <div class="layanan-item">
+            <img src="icon-pensiun.png" alt="Pensiun">
+            <span>Pengajuan Pensiun</span>
         </div>
-        <div class="form-group">
-            <label>Tanggal Surat/Permohonan *</label>
-            <input type="text" placeholder="Tanggal Surat/Permohonan">
-        </div>
-        <div class="form-group">
-            <label>Nama Instansi/Lembaga/Seksi Pemohon *</label>
-            <input type="text" placeholder="Nama Instansi/Lembaga/Seksi Pemohon">
-        </div>
-        <div class="form-group">
-            <label>Perihal Surat/Permohonan *</label>
-            <input type="text" placeholder="Perihal Surat/Permohonan">
-        </div>
-        <h2>Dokumen pernyataan yang harus diupload</h2>
-        <div class="form-group upload-group">
-            <label>1. Upload SK Terakhir *</label>
-            <input type="file" accept=".pdf, .jpg, .png" onchange="updateFileName(this, 'sk-terakhir')">
-            <span id="sk-terakhir">No file chosen</span>
-        </div>
-        <div class="form-group upload-group">
-            <label>2. Upload SKP 2 Tahun *</label>
-            <input type="file" accept=".pdf, .jpg, .png" onchange="updateFileName(this, 'skp-2tahun')">
-            <span id="skp-2tahun">No file chosen</span>
-        </div>
-        <div class="form-group upload-group">
-            <label>3. Upload Kartu Pegawai (Karppeg) *</label>
-            <input type="file" accept=".pdf, .jpg, .png" onchange="updateFileName(this, 'karppeg')">
-            <span id="karppeg">No file chosen</span>
-        </div>
-        <div class="note">
-            Dengan mengisi formulir ini, saya menyatakan bahwa saya telah mengupload data asli dan bukan hasil manipulasi atau editan dari dokumen asli, dan saya bertanggung jawab sepenuhnya jika dikemudian hari terbukti ada pelanggaran.
-        </div>
-        <button>Kirim</button>
-        <button onclick="window.location.href='sekjen.html'">Kembali</button>
     </div>
-    <script>
-        function updateFileName(input, elementId) {
-            const fileName = input.files[0] ? input.files[0].name : 'No file chosen';
-            document.getElementById(elementId).textContent = fileName;
-        }
-    </script>
+</main>
+
+
+    <div style="text-align: center; margin: 30px 0;">
+    <button onclick="location.href='index.html'" 
+        style="background-color: #28a745; 
+               border: none; 
+               padding: 12px 24px; 
+               color: white; 
+               font-size: 18px; 
+               border-radius: 8px; 
+               cursor: pointer; 
+               display: inline-flex; 
+               align-items: center; 
+               gap: 8px;">
+        <img src="icon-beranda.gif" alt="Beranda" style="width: 30px; height: 30px;">
+        Beranda
+    </button>
+</div>
+
+
+    <footer>
+        Kantor Kementerian Agama Kabupaten Bangka Barat<br>
+        Komplek Perkantoran Terpadu Pemkab Bangka Barat Pal 4 Daya Baru Mentok 33351
+    </footer>
+
 </body>
 </html>
