@@ -43,23 +43,25 @@
     }
     .layanan-item {
         display: flex;
-        flex-direction: column; /* susun vertikal */
+        flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 15px;
         border-radius: 10px;
         transition: background-color 0.3s ease, transform 0.3s ease;
         cursor: pointer;
+        text-decoration: none; /* hilangkan underline link */
+        color: inherit;        /* teks mengikuti warna parent */
     }
     .layanan-item:hover {
-        background-color: #084c86; /* warna latar saat hover */
-        transform: translateY(-5px); /* sedikit naik */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* bayangan */
+        background-color: #084c86;
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .layanan-item img {
-        max-width: 50px; /* ukuran icon tetap */
+        max-width: 50px;
         height: auto;
-        margin-bottom: 8px; /* jarak icon dan teks */
+        margin-bottom: 8px;
     }
     .layanan-item span {
         font-size: 14px;
@@ -85,39 +87,39 @@
 <main class="layanan-container">
     <div class="layanan-title">LAYANAN</div>
     <div class="layanan-grid">
-        <div class="layanan-item">
+        <!-- Menu cuti diarahkan ke pengajuan_cuti.html -->
+        <a class="layanan-item" href="pengajuan_cuti.html">
             <img src="icon-cuti.png" alt="Cuti">
             <span>Pengajuan Cuti Tahunan/Haji/Melahirkan</span>
-        </div>
-        <div class="layanan-item">
+        </a>
+        <!-- Placeholder, bisa diarahkan ke file lain nanti -->
+        <a class="layanan-item" href="#">
             <img src="icon-naik-pangkat.png" alt="Naik Pangkat">
             <span>Pengajuan Kenaikan Pangkat</span>
-        </div>
-        <div class="layanan-item">
+        </a>
+        <a class="layanan-item" href="#">
             <img src="icon-pensiun.png" alt="Pensiun">
             <span>Pengajuan Pensiun</span>
-        </div>
+        </a>
     </div>
 </main>
 
-
     <div style="text-align: center; margin: 30px 0;">
-    <button onclick="location.href='index.html'" 
-        style="background-color: #28a745; 
-               border: none; 
-               padding: 12px 24px; 
-               color: white; 
-               font-size: 18px; 
-               border-radius: 8px; 
-               cursor: pointer; 
-               display: inline-flex; 
-               align-items: center; 
-               gap: 8px;">
-        <img src="icon-beranda.gif" alt="Beranda" style="width: 30px; height: 30px;">
-        Beranda
-    </button>
-</div>
-
+        <button onclick="location.href='index.html'" 
+            style="background-color: #28a745; 
+                   border: none; 
+                   padding: 12px 24px; 
+                   color: white; 
+                   font-size: 18px; 
+                   border-radius: 8px; 
+                   cursor: pointer; 
+                   display: inline-flex; 
+                   align-items: center; 
+                   gap: 8px;">
+            <img src="icon-beranda.gif" alt="Beranda" style="width: 30px; height: 30px;">
+            Beranda
+        </button>
+    </div>
 
     <footer>
         Kantor Kementerian Agama Kabupaten Bangka Barat<br>
