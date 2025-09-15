@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PENGAJUAN CUTI PEGAWAI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Overlay */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    /* Modal */
+    .modal {
+      background: #fff;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 700px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .modal h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .form-group input[type="file"] {
+      padding: 4px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn-confirm {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .btn-cancel {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Modal Overlay -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2>PENGAJUAN CUTI PEGAWAI</h2>
+      <form id="cutiForm">
+        <div class="form-group">
+          <label for="namaPemohon">Nama Pemohon</label>
+          <input type="text" id="namaPemohon" name="namaPemohon" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nomorWa">Nomor WA</label>
+          <input type="text" id="nomorWa" name="nomorWa" required>
+        </div>
+
+        <div class="form-group">
+          <label for="nomorSurat">Nomor Surat</label>
+          <input type="text" id="nomorSurat" name="nomorSurat" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tanggalSurat">Tanggal Surat Permohonan</label>
+          <input type="date" id="tanggalSurat" name="tanggalSurat" required>
+        </div>
+
+        <div class="form-group">
+          <label for="instansi">Nama Instansi/Lembaga/Seksi</label>
+          <input type="text" id="instansi" name="instansi" required>
+        </div>
+
+        <div class="form-group">
+          <label for="perihal">Perihal Surat Permohonan</label>
+          <textarea id="perihal" name="perihal" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Upload Surat Permohonan</label>
+          <input type="file" name="suratPermohonan" accept=".pdf,.jpg,.png" required>
+        </div>
+
+        <div class="form-group">
+          <label>Upload SK Terakhir</label>
+          <input type="file" name="skTerakhir" accept=".pdf,.jpg,.png">
+        </div>
+
+        <div class="form-group">
+          <label>Upload Parkes Bidan/Dokter (Khusus Cuti Melahirkan)</label>
+          <input type="file" name="parkesBidan" accept=".pdf,.jpg,.png">
+        </div>
+
+        <div class="form-group">
+          <label>Upload Jadwal Keberangkatan Haji (Khusus Cuti Haji/Umroh)</label>
+          <input type="file" name="jadwalHaji" accept=".pdf,.jpg,.png">
+        </div>
+
+        <div class="form-group">
+          <label>Upload Bukti Pelunasan (Khusus Haji/Umroh)</label>
+          <input type="file" name="buktiPelunasan" accept=".pdf,.jpg,.png">
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-confirm">Konfirmasi</button>
+          <button type="button" class="btn btn-cancel" id="btnCancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Cancel button action
+    document.getElementById("btnCancel").addEventListener("click", function() {
+      window.location.href = "https://igum84.github.io/PTSP-ONLINE-KEMENAG-BABAR/sekjen.html";
+    });
+
+    // Form submit action (demo)
+    document.getElementById("cutiForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      alert("Form berhasil dikonfirmasi!");
+      // di sini bisa ditambahkan logika untuk upload ke server / API
+    });
+  </script>
+
+</body>
+</html>
